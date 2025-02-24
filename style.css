@@ -1,0 +1,206 @@
+/* Configuração global para garantir boa responsividade */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #110043;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header .logo img {
+    width: 3rem;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 80%;
+    margin-top: 7rem;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: calc(100vh - 7rem);
+}
+
+/* 🔹 Diferenciação visual das seções */
+fieldset {
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Seção de Informações Pessoais */
+.info-pessoal {
+    background-color: #e0f7fa; /* Azul claro */
+    border: 2px solid #0288d1;
+}
+
+.info-materiais {
+    background-color: #e8f5e9; /* Verde claro */
+    border: 2px solid #2e7d32;
+}
+
+/* Legenda para diferenciar seções */
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: #333;
+}
+
+/* Inputs e botões */
+input, select, button {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+input, select {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #3700ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #42eedc;
+}
+
+button.add-button {
+    background-color: #28a745;
+    color: white;
+}
+
+button.add-button:hover {
+    background-color: #218838;
+}
+
+/* Lista de itens */
+#lista-itens li {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Botão de remover */
+button.remove-button {
+    width: 15%;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+button.remove-button:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: #3700ff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header .logo img {
+        width: 4rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 6rem;
+    }
+
+    section {
+        margin-bottom: 1rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    footer {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Validação */
+.erro {
+    border: 2px solid red;
+}
+
+.mensagem-erro {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
